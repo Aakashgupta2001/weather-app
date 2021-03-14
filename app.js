@@ -12,8 +12,8 @@ window.addEventListener("load", () => {
       latitude = position.coords.latitude;
       console.log(`${longitude}, ${latitude}`);
 
-      //proxy = `https://cors-anywhere.herokuapp.com/`;
-      api = `api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=bd6030007357a2759e054c3d6cb8259d`;
+      proxy = `https://cors-anywhere.herokuapp.com/`;
+      api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=bd6030007357a2759e054c3d6cb8259d`;
 
       //fetching data from api and converting it into json
       fetch(api)
