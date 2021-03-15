@@ -12,7 +12,7 @@
   color: #101010 !important;
 }
 
-    
+
 h1{
 /*font-size: 16rem;*/
 font-size: 30vh;
@@ -70,11 +70,23 @@ body {
   justify-content: center;
 }
 
-.dark-mode{
+.dark-bulb , .light-bulb{
   position: fixed;
   top: 1vh;
   right: 1vh;
   cursor: pointer;
+}
+
+.dark-bulb{
+  display: none;
+}
+
+.display-bulb{
+  display: block;
+}
+
+.hide-bulb{
+  display: none;
 }
 
 
