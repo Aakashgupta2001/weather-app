@@ -43,13 +43,15 @@ function darkmode() {
   const body = document.querySelector("body");
   const lightBulb = document.querySelector(".light-bulb");
   const darkBulb = document.querySelector(".dark-bulb");
+  const container = document.querySelector(".container");
 
   console.log("darkmode func. launched");
 
   darkSwitch.addEventListener("click", () => {
     body.classList.toggle("light-mode");
+    body.classList.toggle("dark-mode-background");
     darkBulb.classList.toggle("display-bulb");
-
+    container.classList.toggle("container-dark");
     console.log("light bulb clicked");
   });
 }

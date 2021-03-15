@@ -10,8 +10,18 @@
 .light-mode{
   background-color: #E5E5E5 !important; 
   color: #101010 !important;
+  background-image: url(./img/light.jpg);
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover; 
 }
 
+.dark-mode-background{
+  background-image: url(./img/dark.jpg);
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover; 
+}
 
 h1{
 /*font-size: 16rem;*/
@@ -28,6 +38,8 @@ h3{
 }
 
 
+
+
 .container .temp span{
   font-size: 30vh;
   font-weight: 500;
@@ -42,11 +54,17 @@ body {
   display: flex;
 }
 
-
+.container-dark{
+  background: linear-gradient(114deg, rgba(36, 36, 36, 0.685) -23.95%, rgba(20, 20, 20, 0.425) 74.94%) !important;
+}
 .container{
   margin: auto;
-  height: 60%;
-  width: 80%;
+  height: auto;
+  width: auto;
+
+  padding: 10vh;
+  background: linear-gradient(114deg, rgba(255, 255, 255, 0.3) -23.95%, rgba(255, 255, 255, 0.3) 74.94%);
+  border-radius: 4vh;
 }
 
 
