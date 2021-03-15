@@ -45,32 +45,42 @@ body {
 .container .temp{
   display: flex;
   justify-content: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-90%);
+  align-items: center;
 }
 
 .container .timezone{
-  position:fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% , -15%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2vh;
 }
 
 .container .summary{
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%,0%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.dark-mode{
+  position: fixed;
+  top: 1vh;
+  right: 1vh;
+  cursor: pointer;
 }
 
 
-
-/*
-.dark-mode svg{
-    color: #E5E5E5;
-}*/
-.dark-mode {
-  display: none;
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size: 20vh;
+  }
+  .container .temp span{
+    font-size:20vh;
+  }
+  h2{
+    font-size: 5vh;
+  }
+  h3{
+    font-size: 3.25vh;
+    
+  }
 }
