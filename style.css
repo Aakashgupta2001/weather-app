@@ -7,6 +7,12 @@
 
 }
 
+.light-mode{
+  background-color: #E5E5E5 !important; 
+  color: #101010 !important;
+}
+
+    
 h1{
 /*font-size: 16rem;*/
 font-size: 30vh;
@@ -28,12 +34,14 @@ h3{
   padding-left: 3vh;
 }
 
+
 body {
   height: 100vh;
   color: #E5E5E5;
   background-color: #101010;
   display: flex;
 }
+
 
 .container{
   margin: auto;
@@ -47,6 +55,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 
 .container .timezone{
   display: flex;

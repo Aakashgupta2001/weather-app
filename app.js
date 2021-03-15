@@ -36,3 +36,16 @@ window.addEventListener("load", () => {
     Displaysummary.textContent = "please allow location access";
   }
 });
+
+//dark mode / light mode switch...
+function darkmode() {
+  const darkSwitch = document.querySelector(".dark-mode");
+  const body = document.querySelector("body");
+  console.log("darkmode func. launched");
+  darkSwitch.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
+    console.log("light bulb clicked");
+  });
+}
+
+darkmode();
