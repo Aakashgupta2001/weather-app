@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
           const timezone = data.name;
           console.log(timezone);
 
-          displayTemp.textContent = temperature - 273.15;
+          displayTemp.textContent = Math.round(temperature - 273.15);
           Displaysummary.textContent = summary;
           DisplayLocation.textContent = timezone;
         });
