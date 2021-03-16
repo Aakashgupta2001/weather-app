@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
   let longitude;
   let latitude;
 
-  const displayTemp = document.querySelector(".container .temp h1");
+  let displayTemp = document.querySelector(".container .temp h1");
   const Displaysummary = document.querySelector(".container .summary h3");
   const DisplayLocation = document.querySelector(".container .timezone h2");
 
@@ -56,6 +56,25 @@ function darkmode() {
   });
 }
 
-function changeBulb() {}
+//time
+function time() {
+  let minute = new Date().getMinutes();
+  let hour = new Date().getHours();
 
+  const displayHour = document.querySelector(".time .hour");
+  const displayMinute = document.querySelector(".time .minute");
+  console.log(hour, minute);
+
+  displayHour.textContent = hour;
+  displayMinute.textContent = minute;
+}
+
+function callTime() {
+  time();
+  setTimeout(() => {
+    callTime();
+  }, 2000);
+}
+
+callTime();
 darkmode();
