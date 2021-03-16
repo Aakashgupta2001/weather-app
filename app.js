@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
     navigator.geolocation.getCurrentPosition((position) => {
       longitude = position.coords.longitude;
       latitude = position.coords.latitude;
-      console.log(`${longitude}, ${latitude}`);
+      // console.log(`${longitude}, ${latitude}`);
 
       //proxy = `https://cors-anywhere.herokuapp.com/`;
       api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=bd6030007357a2759e054c3d6cb8259d`;
@@ -21,11 +21,11 @@ window.addEventListener("load", () => {
           return response.json();
         })
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           const temperature = data.main.temp;
           const summary = data.weather[0].description;
           const timezone = data.name;
-          console.log(timezone);
+          // console.log(timezone);
 
           displayTemp.textContent = Math.round(temperature - 273.15);
           Displaysummary.textContent = summary;
@@ -52,7 +52,7 @@ function darkmode() {
     body.classList.toggle("dark-mode-background");
     darkBulb.classList.toggle("display-bulb");
     container.classList.toggle("container-dark");
-    console.log("light bulb clicked");
+    // console.log("light bulb clicked");
   });
 }
 
