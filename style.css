@@ -2,120 +2,137 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-          font-family: 'Roboto', sans-serif;
-
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-.light-mode{
+.light-mode {
   /*background-color: #E5E5E5 !important; */
   color: #101010 !important;
   background-image: url(./img/light.jpg);
   background-repeat: no-repeat;
-  background-position: center; 
-  background-size: cover; 
- 
+  background-position: center;
+  background-size: cover;
 }
 
-.dark-mode-background{
+.dark-mode-background {
   background-image: url(./img/dark.jpg);
   background-repeat: no-repeat;
-  background-position: center; 
-  background-size: cover; 
-  
+  background-position: center;
+  background-size: cover;
 }
 
-h1{
-/*font-size: 16rem;*/
-font-size: 30vh;
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.644); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+.overlayToggle {
+  background-color: rgba(0, 0, 0, 0); /* Black background with opacity */
+}
+
+h1 {
+  /*font-size: 16rem;*/
+  font-size: 30vh;
   font-weight: 700;
 }
-h2{
+h2 {
   font-size: 15vh;
   font-weight: 700;
 }
-h3{
+h3 {
   font-size: 7.5vh;
   font-weight: 700;
 }
 
-
-
-
-.container .temp span{
+.container .temp span {
   font-size: 30vh;
   font-weight: 500;
   padding-left: 3vh;
 }
 
-
 body {
   height: 100vh;
-  color: #E5E5E5;
+  color: #e5e5e5;
   background-color: #101010;
   display: flex;
 }
 
-.container-dark{
-  background: linear-gradient(114deg, rgba(36, 36, 36, 0.685) -23.95%, rgba(20, 20, 20, 0.425) 74.94%) !important;
+.container-dark {
+  background: linear-gradient(
+    114deg,
+    rgba(36, 36, 36, 0.685) -23.95%,
+    rgba(20, 20, 20, 0.425) 74.94%
+  ) !important;
 }
 
-.container{
+.container {
+  z-index: 5;
   margin: auto;
   height: auto;
   width: auto;
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 10vh;
-  background: linear-gradient(114deg, rgba(255, 255, 255, 0.3) -23.95%, rgba(255, 255, 255, 0.3) 74.94%);
+  background: linear-gradient(
+    114deg,
+    rgba(255, 255, 255, 0.3) -23.95%,
+    rgba(255, 255, 255, 0.3) 74.94%
+  );
   backdrop-filter: blur(2px);
-  
 
   border-radius: 4vh;
 }
 
-
-.container .temp{
+.container .temp {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.container .timezone{
+.container .timezone {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: -2vh;
 }
 
-.container .summary{
+.container .summary {
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
-.dark-bulb , .light-bulb{
+.dark-bulb,
+.light-bulb {
   position: fixed;
   top: 1vh;
   right: 1vh;
   cursor: pointer;
 }
 
-.dark-bulb{
+.dark-bulb {
   display: none;
 }
 
-.display-bulb{
+.display-bulb {
   display: block;
 }
 
-.hide-bulb{
+.hide-bulb {
   display: none;
 }
 
-
 /*time */
-.time{
+.time {
   display: flex;
   position: absolute;
   right: 1vh;
@@ -124,27 +141,23 @@ body {
   font-weight: 700;
 }
 
-
-
-
 @media only screen and (max-width: 700px) {
-  h2{
+  h2 {
     font-size: 8vh;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  h1{
+  h1 {
     font-size: 20vh;
   }
-  .container .temp span{
-    font-size:20vh;
+  .container .temp span {
+    font-size: 20vh;
   }
-  h2{
+  h2 {
     font-size: 5vh;
   }
-  h3{
+  h3 {
     font-size: 3.25vh;
-    
   }
 }

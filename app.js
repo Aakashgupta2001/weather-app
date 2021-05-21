@@ -44,7 +44,7 @@ function darkmode() {
   const lightBulb = document.querySelector(".light-bulb");
   const darkBulb = document.querySelector(".dark-bulb");
   const container = document.querySelector(".container");
-
+  const overlay = document.querySelector(".overlay");
   console.log("darkmode func. launched");
 
   darkSwitch.addEventListener("click", () => {
@@ -52,6 +52,7 @@ function darkmode() {
     body.classList.toggle("dark-mode-background");
     darkBulb.classList.toggle("display-bulb");
     container.classList.toggle("container-dark");
+    overlay.classList.toggle("overlayToggle");
     // console.log("light bulb clicked");
   });
 }
